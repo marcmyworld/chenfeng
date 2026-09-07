@@ -38,7 +38,7 @@ echo "====================="
 echo "      repo init      "
 echo "====================="
 
-repo init -u https://github.com/Evolution-X/manifest -b bka --depth=1 --git-lfs;
+repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr2 --depth=1 --git-lfs;
 git clone https://github.com/marcmyworld/chenfeng_manifest.git -b lineage-23.2 --depth=1 .repo/local_manifests;
 
 
