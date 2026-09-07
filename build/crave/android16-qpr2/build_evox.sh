@@ -64,7 +64,7 @@ echo "   starting build  "
 echo "===================="
 
 . build/envsetup.sh;
-# export WITH_GMS=true
+export WITH_GMS=true
 # export TARGET_USES_MINI_GAPPS=true
 lunch lineage_chenfeng-bp4a-user;
 m evolution -j$(nproc --all);
