@@ -53,7 +53,6 @@ echo "==================="
 # sudo apt-get install -y patchelf coreutils ccache;
 
 export BUILD_USERNAME=Marcy
-export WITH_GMS=true
 export BUILD_HOSTNAME=foss
 
 rm -rf build/soong/fsgen;
@@ -65,6 +64,8 @@ echo "   starting build  "
 echo "===================="
 
 . build/envsetup.sh;
+export WITH_GMS=true
+export TARGET_USES_MINI_GAPPS=true
 lunch lineage_chenfeng-bp4a-user;
 m evolution -j$(nproc --all);
 
