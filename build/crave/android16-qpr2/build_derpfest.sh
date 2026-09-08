@@ -60,6 +60,7 @@ echo "   starting build  "
 echo "===================="
 
 . build/envsetup.sh;
+export WITH_GMS=true
 lunch lineage_chenfeng-bp4a-user;
 mka derp -j$(nproc --all);
 
