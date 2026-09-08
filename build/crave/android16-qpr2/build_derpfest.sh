@@ -12,11 +12,10 @@ banner() {
     echo "║    ██████╔╝███████╗██║  ██║██║     ██║     ███████╗███████║   ██║       ║"
     echo "║    ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚══════╝   ╚═╝       ║"
     echo "║                                                                         ║"
-    echo "║                             D E R P F E S T                             ║"
-    echo "║                        Automated Release Builder                        ║"
+    echo "║                         D E R P F E S T                                 ║"
+    echo "║                     Automated Release Builder                           ║"
     echo "║                                                                         ║"
     echo "╠═════════════════════════════════════════════════════════════════════════╣"
-    echo "║  Device     : Xiaomi Civi 4 Pro / chenfeng                              ║"
     echo "║  Build      : bp4a-user                                                 ║"
     echo "║  Branch     : 16.2                                                      ║"
     echo "╚═════════════════════════════════════════════════════════════════════════╝"
@@ -49,10 +48,7 @@ echo "==================="
 
 /opt/crave/resync.sh;
 
-# sudo apt-get update;
-# sudo apt-get install -y patchelf coreutils ccache;
-
-export BUILD_USERNAME=Marcy
+export BUILD_USERNAME=marc
 export BUILD_HOSTNAME=foss
 
 rm -rf build/soong/fsgen;
@@ -77,7 +73,7 @@ ZIP=$(find out/target/product/chenfeng -maxdepth 1 -type f -name "*.zip" | head 
 
 if [ -n "$ZIP" ]; then
     echo "Uploading: $ZIP..."
-    wget https://raw.githubusercontent.com/shrkwy/chenfeng/refs/heads/main/tools/upload_util.sh
+    wget https://raw.githubusercontent.com/marcmyworld/chenfeng/refs/heads/main/tools/upload_util.sh
     chmod +x upload_util.sh
     ./upload_util.sh "$ZIP"
 else
